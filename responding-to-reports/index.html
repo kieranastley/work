@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responding to Reports of Psychosocial Hazards</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Responding to Reports of Psychosocial Hazards</h1>
+
+        <div class="step-indicator" role="progressbar" aria-label="Current section progress">
+            <span class="step-dot active" data-step="1" aria-current="step"></span>
+            <span class="step-dot" data-step="2"></span>
+            <span class="step-dot" data-step="3"></span>
+            <span class="step-dot" data-step="4"></span>
+        </div>
+
+        <div class="form-section active">
+            <section aria-labelledby="section1-title">
+                <h2 id="section1-title">Section 1: What triggered this report?</h2>
+                <div class="checkbox-grid" role="group" aria-labelledby="trigger-options-label">
+                    <p id="trigger-options-label" class="sr-only">Select all that apply:</p>
+                    <label><input type="checkbox" name="trigger" value="Workplace incident"> Workplace incident</label>
+                    <label><input type="checkbox" name="trigger" value="Injury, illness, or risk register entries"> Injury, illness, or risk register entries</label>
+                    <label><input type="checkbox" name="trigger" value="Formal reports of psychosocial hazards"> Formal reports of psychosocial hazards</label>
+                    <label><input type="checkbox" name="trigger" value="Worker grievances"> Worker grievances</label>
+                    <label><input type="checkbox" name="trigger" value="Workers' Compensation claims"> Workers' Compensation claims</label>
+                    <label><input type="checkbox" name="trigger" value="Staff surveys"> Staff surveys</label>
+                    <label><input type="checkbox" name="trigger" value="Informal worker feedback"> Informal worker feedback</label>
+                    <label><input type="checkbox" name="trigger" value="Shared duty partner concerns"> Shared duty partner concerns</label>
+                    <label><input type="checkbox" name="trigger" value="Worker-supervisor-manager conversations"> Worker-supervisor-manager conversations</label>
+                    <label><input type="checkbox" name="trigger" value="Hazard reporting system or incident register"> Hazard reporting system or incident register</label>
+                    <label><input type="checkbox" name="trigger" value="Absenteeism and sick leave trends"> Absenteeism and sick leave trends</label>
+                    <label><input type="checkbox" name="trigger" value="HR records and reports"> HR records and reports</label>
+                    <label><input type="checkbox" name="trigger" value="Exit interviews and employee feedback"> Exit interviews and employee feedback</label>
+                    <label><input type="checkbox" name="trigger" value="Whistleblower reports"> Whistleblower reports</label>
+                    <label><input type="checkbox" name="trigger" value="Regulatory or union concerns"> Regulatory or union concerns</label>
+                    <label><input type="checkbox" name="trigger" value="Workload or productivity data"> Workload or productivity data</label>
+                    <label><input type="checkbox" name="trigger" value="Changes in workplace culture"> Changes in workplace culture</label>
+                    <label><input type="checkbox" name="trigger" value="Client or customer complaints"> Client or customer complaints</label>
+                </div>
+
+                <h3>Details:</h3>
+                <label for="single-date">One-off incident:</label>
+                <input type="text" id="single-date" placeholder="Select date" aria-describedby="single-date-desc" name="singleDate">
+                <p id="single-date-desc" class="sr-only">Enter the date of the single incident.</p>
+
+                <label>OR over a period of time:</label>
+                <label for="start-date" class="sr-only">Start date</label>
+                <input type="text" id="start-date" placeholder="Start date" name="startDate">
+                <label for="end-date" class="sr-only">End date</label>
+                <input type="text" id="end-date" placeholder="End date" name="endDate">
+
+                <label for="reported-role">Initially reported to:</label>
+                <input type="text" id="reported-role" placeholder="Insert role of person" name="reportedRole">
+                <label for="report-date">On the:</label>
+                <input type="text" id="report-date" placeholder="Select date" name="reportDate">
+
+                <label for="internal-reference">Internal reference number:</label>
+                <input type="text" id="internal-reference" name="internalReference">
+            </section>
+        </div>
+
+        <div class="form-section">
+            <section aria-labelledby="section2-title">
+                <h2 id="section2-title">Section 2: What psychosocial hazards are involved?</h2>
+                <h4>Review the report or concern raised in Section 1 and use the list below to identify any psychosocial hazards that may be contributing to the issue. You can use the Comments column to note any details that help explain how the hazard shows up in your workplace.</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 55%;">Psychosocial Hazard</th>
+                            <th style="width: 45%;">Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Role overload"> Role overload (high workloads or job demands)</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Role underload"> Role underload (low workloads or job demands)</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Exposure to traumatic events"> Exposure to traumatic events</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Role conflict or lack of role clarity"> Role conflict or lack of role clarity</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Low job control"> Low job control</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Poor workplace relationships"> Poor workplace relationships with supervisors, managers, or co-workers</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Poor support from supervisors and managers"> Poor support from supervisors and managers</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Poor co-worker support"> Poor co-worker support</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Workplace violence"> Workplace violence</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Bullying"> Bullying</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Harassment including sexual harassment"> Harassment including sexual harassment</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Inadequate reward and recognition"> Inadequate reward and recognition</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Hazardous physical working environments"> Hazardous physical working environments</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Remote or isolated work"> Remote or isolated work</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Poor procedural justice"> Poor procedural justice (processes for making decisions)</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        <tr><td><label><input type="checkbox" name="hazard" value="Other"> Other</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div class="form-section">
+            <section aria-labelledby="section3-title">
+                <h2 id="section3-title">Section 3: How widespread or serious is the issue?</h2>
+                <h4>Once you've identified a psychosocial hazard, the next step is to understand how widespread and serious it may be across the workplace.</h4>
+                <p>Complete the following two activities to guide your assessment.</p>
+                
+                <hr>
+                <h3>Activity 1: Look for other signs of the same hazard</h3>
+                <p>Use all of your available workplace data to explore whether this issue is isolated or part of a broader pattern. Consider:</p>
+                <ul>
+                    <li>Have similar concerns been raised in other areas?</li>
+                    <li>Do the same issues appear across multiple sources (e.g. surveys, grievances, sick leave, turnover)?</li>
+                    <li>Are other workgroups exposed to similar conditions (e.g. poor supervision, excessive workload, harassment risk)?</li>
+                </ul>
+
+                <p><i>Check sources like HR records, exit interviews, pulse surveys, and informal feedback channels to identify patterns or hotspots.</i></p>
+
+                <p><strong>Use this table to track your findings:</strong></p>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 55%;">Reviewing other data</th>
+                                <th style="width: 45%;">Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Workplace incident"> Workplace incident</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Injury, illness, or risk register entries"> Injury, illness, or risk register entries</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Formal reports of psychosocial hazards"> Formal reports of psychosocial hazards</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Worker grievances"> Worker grievances</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Workers' Compensation claims"> Workers' Compensation claims</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Staff surveys"> Staff surveys</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Informal worker feedback"> Informal worker feedback</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Shared duty partner concerns"> Shared duty partner concerns</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Worker-supervisor-manager conversations"> Worker-supervisor-manager conversations</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Hazard reporting system or incident register"> Hazard reporting system or incident register</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Absenteeism and sick leave trends"> Absenteeism and sick leave trends</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="HR records and reports"> HR records and reports</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Exit interviews and employee feedback"> Exit interviews and employee feedback</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Whistleblower reports"> Whistleblower reports</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Regulatory or union concerns"> Regulatory or union concerns</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Workload or productivity data"> Workload or productivity data</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Changes in workplace culture"> Changes in workplace culture</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                            <tr><td><label><input type="checkbox" name="hazard-check" value="Client or customer complaints"> Client or customer complaints</label></td><td><textarea placeholder="Comments..." oninput="autoResize(this)"></textarea></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr>
+                <h3>Activity 2: Assess how widespread and serious the issue is</h3>
+                <h4>Consider the following four risk factors:</h4>
+                <ul>
+                    <li><strong>Duration</strong> - How long has the issue been present?</li>
+                    <li><strong>Frequency</strong> - How often has it been reported or observed?</li>
+                    <li><strong>Severity</strong> - What level of harm has it caused or is likely to cause?</li>
+                    <li><strong>Exposure</strong> - How many workers are or may be affected?</li>
+                </ul>
+
+                <h4>Examine causes and context:</h4>
+                <ul>
+                    <li>Are there organisational factors contributing (e.g. unrealistic deadlines, unclear roles, weak leadership)?</li>
+                    <li>Has this issue happened before?</li>
+                    <li>Could it be part of a broader culture problem?</li>
+                </ul>
+
+                <h4>Determine the scope</h4>
+                <p>Based on your review, classify the issue as one of the following:</p>
+
+                <div role="radiogroup" aria-labelledby="widespread-options-label">
+                    <p id="widespread-options-label" class="sr-only">Select the seriousness of the issue:</p>
+                    <label><input type="radio" name="widespread" value="Localized"> <strong>Localised</strong> - affecting a small
+                        group or one area</label>
+                    <label><input type="radio" name="widespread" value="Emerging"> <strong>Emerging</strong> - appearing in more than
+                        one part of the business</label>
+                    <label><input type="radio" name="widespread" value="Systemic"> <strong>Systemic</strong> - widespread and likely
+                        to require organisation-wide action</label>
+                </div>
+            </section>
+        </div>
+
+        <div class="form-section">
+            <section aria-labelledby="section4-title">
+                <h2 id="section4-title">Section 4: What actions will be taken?</h2>
+                <h4>Based on your assessment in the previous sections, this is where you record how you will respond to the identified hazard. Use the table below to document control measures that will be implemented to eliminate or minimise the risk, in line with your WHS duties.</h>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timeframe</th>
+                                <th>Action Required</th>
+                                <th>Person Responsible</th>
+                                <th>Implemented On</th>
+                                <th>Reviewed On</th>
+                                <th>Comments After Review</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Short Term</td>
+                                <td><textarea class="table-comment" placeholder="Enter agreed actions..." oninput="autoResize(this)"></textarea></td>
+                                <td><textarea class="table-comment" placeholder="Enter role responsible..." oninput="autoResize(this)"></textarea></td>
+                                <td><input type="text" class="datepicker" placeholder="Select date"></td>
+                                <td><input type="text" class="datepicker" placeholder="Select date"></td>
+                                <td><textarea class="table-comment" placeholder="Enter comments..." oninput="autoResize(this)"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Medium Term</td>
+                                <td><textarea class="table-comment" placeholder="Enter agreed actions..." oninput="autoResize(this)"></textarea></td>
+                                <td><textarea class="table-comment" placeholder="Enter role responsible..." oninput="autoResize(this)"></textarea></td>
+                                <td><input type="text" class="datepicker" placeholder="Select date"></td>
+                                <td><input type="text" class="datepicker" placeholder="Select date"></td>
+                                <td><textarea class="table-comment" placeholder="Enter comments..." oninput="autoResize(this)"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Long Term</td>
+                                <td><textarea class="table-comment" placeholder="Enter agreed actions..." oninput="autoResize(this)"></textarea></td>
+                                <td><textarea class="table-comment" placeholder="Enter role responsible..." oninput="autoResize(this)"></textarea></td>
+                                <td><input type="text" class="datepicker" placeholder="Select date"></td>
+                                <td><input type="text" class="datepicker" placeholder="Select date"></td>
+                                <td><textarea class="table-comment" placeholder="Enter comments..." oninput="autoResize(this)"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div class="form-navigation">
+            <button type="button" class="nav-button prev-button" disabled>Previous Section</button>
+            <button type="button" class="nav-button next-button">Next Section</button>
+            <button type="submit" class="nav-button submit-button" style="display: none;">Save Report</button>
+        </div>
+
+        <div class="actions">
+            <button type="reset" class="reset-button">Clear All Responses</button>
+        </div>
+    </div>
+    <footer>
+        <p>2025 SafeWork NSW. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
